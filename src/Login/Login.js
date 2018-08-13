@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import './Login.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
-import DropDownMenu from 'material-ui/DropDownMenu';
-import MenuItem from 'material-ui/MenuItem';
+import AppBar from 'material-ui/AppBar';
+
 
 class Login extends Component {
   constructor(props) {
@@ -14,39 +14,46 @@ class Login extends Component {
       password:""
     };
 
-    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  handleChange (event) {
-    const target = event.target;
-    const value = target.type = target.value;
-    const name = target.name;
-
-    this.setState({
-        [name]: value
-    });
-}
 
   handleSubmit(event) {
     console.log('A name was submitted: ' + this.state.username,this.state.password);
     event.preventDefault();
   }
 
+
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type="text" name = "username"value={this.state.username} onChange={this.handleChange} />
-        </label>
-        <label>
-          password:
-          <input type="password" name = "password" value={this.state.password} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+     
+       <MuiThemeProvider>
+        <div  className="Login">
+        <AppBar
+        title="Welcome To DockPlus"
+         />
+         <TextField
+           hintText="Enter your Username"
+           floatingLabelText="Username"
+           onChange = {(event,newValue)=>this.setState({username:newValue})}
+           />
+         <br/>
+           <TextField
+             type="password"
+             hintText="Enter your Password"
+             floatingLabelText="Password"
+             onChange = {(event,newValue) => this.setState({password:newValue})}
+             />
+           <br/>
+           <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleSubmit(event)}/>
+       </div>
+       </MuiThemeProvider>
+
+      
     );
   }
 }
+
+const style = {
+  margin: 15,
+};
  export default Login;
