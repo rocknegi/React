@@ -25,7 +25,7 @@ class Login extends Component {
 
   render() {
     return (
-     
+     <div>
        <MuiThemeProvider>
         <div  className="Login">
         <AppBar
@@ -45,15 +45,18 @@ class Login extends Component {
              />
            <br/>
            <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleSubmit(event)}/>
+           <br />
+           <a href = "/signup">  create a new account </a>
        </div>
        </MuiThemeProvider>
-
       
+       </div>    
     );
   }
 }
 
 const style = {
   margin: 15,
+  
 };
  export default Login;
