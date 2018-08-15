@@ -19,6 +19,7 @@ class Login extends Component {
 
   handleSubmit(event) {
     console.log('A name was submitted: ' + this.state.username,this.state.password);
+    window.location.href = "/dashboard";
     event.preventDefault();
   }
 
@@ -44,7 +45,7 @@ class Login extends Component {
              onChange = {(event,newValue) => this.setState({password:newValue})}
              />
            <br/>
-           <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleSubmit(event)}/>
+           <RaisedButton label="Submit" primary={true} style={style} onClick={this.handleSubmit}/>
            <br />
            <a href = "/signup">  create a new account </a>
        </div>
