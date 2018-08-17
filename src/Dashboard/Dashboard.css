@@ -1,3 +1,18 @@
 .Appbar {
     text-align: center;
 }
+
+.iconNotification {
+    margin: 20px 40px 0px 0px;
+    cursor: pointer;
+}
+
+.iconSettings {
+    margin: 20px 20px 0px 0px;
+    cursor: pointer;
+}
+
+.iconMessage {
+    margin: 20px 30px 0px 0px;
+    cursor: pointer;
+}
