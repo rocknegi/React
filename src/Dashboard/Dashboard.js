@@ -18,7 +18,11 @@ class Dashboard extends Component {
     handleToggle = () => this.setState({open: !this.state.open});
     showBar = () => {
         this.setState({show: 'bar', open: false });
-    };
+    }
+    
+    addPerson = () => {
+        window.location.href = "/addPerson";
+    }
 
     render() {
         return (
@@ -53,8 +57,9 @@ class Dashboard extends Component {
 
                 </Drawer>
             </div>
+
            </MuiThemeProvider>
-          
+           <div className="fab" onClick = {this.addPerson}> + </div>
            </div>    
         );
       }

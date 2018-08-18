@@ -47,7 +47,7 @@ class Login extends Component {
            <br/>
            <RaisedButton label="Submit" primary={true} style={style} onClick={this.handleSubmit}/>
            <br />
-           <a href = "/signup">  create a new account </a>
+           <a className = "signup" href = "/signup">  create a new account </a>
        </div>
        </MuiThemeProvider>
       
