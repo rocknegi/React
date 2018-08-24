@@ -1,0 +1,10 @@
+.Nav  {
+
+    padding: 29px;
+
+     }
+  .active {
+   background-color: rgb(204, 203, 197);
+   color:Black ;
+   font-weight:bold;
+}

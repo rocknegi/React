@@ -1,9 +1,8 @@
 import  React , {Component} from 'react';
 import './AddPerson.css'
+import Header from '../Dashboard/Header/Header'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import Select from '@material-ui/core/Select';
@@ -11,7 +10,9 @@ import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 
 
+
 class AddPerson extends Component {
+    
     constructor(props){
         super(props);
         this.state = {
@@ -37,32 +38,20 @@ class AddPerson extends Component {
       handleChange = event => {
         this.setState({ [event.target.name]: event.target.value });
       };
-    
+
 
     render() {
-        return(
-            <div className = "Person">
+        return (
+        <div>
+            <Header 
+            headerName = "Add Person"
+            
+            >            
+            </Header>
+
             <MuiThemeProvider>
-            
-            <AppBar className = 'Appbar'
-                    iconClassNameRight="muidocs-icon-navigation-expand-more"
-                    title="Add Person"
-                    onLeftIconButtonClick={this.handleToggle}>
-                </AppBar>
-        
-                <Drawer
-                    docked={false}
-                    width={200}
-                    open={this.state.open}
-                    onRequestChange={(open) => this.setState({open})}>
 
-                    <AppBar title=""/>
-                    <MenuItem id="showFooId" onClick={this.showFoo}>Show Foo</MenuItem>
-                    <MenuItem id="showBarId" onClick={this.showBar}>Show Bar</MenuItem>
-
-                </Drawer>
-            
-
+            <div className='Person'>
             <TextField
             hintText="Enter patient's name"
             floatingLabelText="Name"
@@ -121,16 +110,18 @@ class AddPerson extends Component {
              </Select>
              <br/>
            <RaisedButton label="Submit" primary={true} style={style} onClick={this.handleSubmit}/>
+           </div>
            </MuiThemeProvider>
+
+           
+
 
            
             </div>
 
-            
-        )
-    }
+        );
+      }
 }
-
 const style = {
     margin: 15,
     
