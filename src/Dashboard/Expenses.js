@@ -4,10 +4,10 @@ import Dashboard from './Dashboard';
 class Expenses extends Component {
 
   render() {
-    return (  
+    return (
       <div>
-      <Dashboard />
-      hello from Expenses
+        <Dashboard />
+        hello from Expenses
  </div>
     );
   }

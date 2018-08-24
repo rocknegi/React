@@ -12,9 +12,9 @@ class Login extends Component {
     super(props);
     this.state = {
       username: "",
-      password:"",
-      toDashboard:false
-      
+      password: "",
+      toDashboard: false
+
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,49 +22,49 @@ class Login extends Component {
   }
 
   handleSubmit = () => {
-   
-    this.setState({toDashboard:true})
+
+    this.setState({ toDashboard: true })
     return this.props.history.push('/dashboard')
     console.log(this.state.toDashboard)
-    }
+  }
 
   render() {
     if (this.state.toDashboard === true) {
-      
+
     }
     return (
-     <div>
-       <MuiThemeProvider>
-        <div  className="Login">
-        <AppBar
-        title="Welcome To DockPlus"
-         />
-         <TextField
-           hintText="Enter your Username"
-           floatingLabelText="Username"
-           onChange = {(event,newValue)=>this.setState({username:newValue})}
-           />
-         <br/>
-           <TextField
-             type="password"
-             hintText="Enter your Password"
-             floatingLabelText="Password"
-             onChange = {(event,newValue) => this.setState({password:newValue})}
-             />
-           <br/>
-           <RaisedButton label="Submit" primary={true} style={style} onClick={this.handleSubmit}/>
-           <br />
-          
-           <a className = "signup" href = "/signup">  create a new account </a>
-       </div>
-       </MuiThemeProvider>
-       </div>    
+      <div>
+        <MuiThemeProvider>
+          <div className="Login">
+            <AppBar
+              title="Welcome To DockPlus"
+            />
+            <TextField
+              hintText="Enter your Username"
+              floatingLabelText="Username"
+              onChange={(event, newValue) => this.setState({ username: newValue })}
+            />
+            <br />
+            <TextField
+              type="password"
+              hintText="Enter your Password"
+              floatingLabelText="Password"
+              onChange={(event, newValue) => this.setState({ password: newValue })}
+            />
+            <br />
+            <RaisedButton label="Submit" primary={true} style={style} onClick={this.handleSubmit} />
+            <br />
+
+            <a className="signup" style={{ textDecoration: 'none' }} href="/signup">  create a new account </a>
+          </div>
+        </MuiThemeProvider>
+      </div>
     );
   }
 }
 
 const style = {
   margin: 15,
-  
+
 };
- export default Login;
+export default Login;

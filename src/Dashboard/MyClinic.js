@@ -4,10 +4,10 @@ import Dashboard from './Dashboard';
 class MyClinic extends Component {
 
   render() {
-    return (  
+    return (
       <div>
-      <Dashboard />
-      hello from MyClinic
+        <Dashboard />
+        hello from MyClinic
  </div>
     );
   }

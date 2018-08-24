@@ -4,10 +4,10 @@ import Dashboard from './Dashboard';
 class Appointments extends Component {
 
   render() {
-    return (  
+    return (
       <div>
-      <Dashboard />
-      hello from Appointments
+        <Dashboard />
+        hello from Appointments
  </div>
     );
   }
