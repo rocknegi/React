@@ -30,16 +30,6 @@ class Header extends Component {
         return this.props.history.push('/addPerson2')
     }
 
-    oddEvent = (match, location) => {
-        if (!match) {
-            return false
-        }
-
-        const eventID = parseInt(match.params.eventID)
-        return !isNaN(eventID) && eventID % 2 === 1
-    }
-
-
     divStyle = {
         color: 'white',
         textDecoration: 'none'
