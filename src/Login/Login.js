@@ -38,6 +38,7 @@ class Login extends Component {
           <div className="Login">
             <AppBar
               title="Welcome To DockPlus"
+              showMenuIconButton={false}
             />
             <TextField
               hintText="Enter your Username"
