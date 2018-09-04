@@ -16,20 +16,20 @@ class Header extends Component {
         super(props);
 
         this.state = {
-            "open": false,
-            "show": null
+            "open": false
+            
 
         }
     }
 
     handleToggle = () => this.setState({ open: !this.state.open });
-    showBar = () => {
-        this.setState({ show: 'bar', open: false });
-    }
 
     addPerson = () => {
         return this.props.history.push('/addPerson2')
     }
+
+    handleClose = () => {this.setState({ open: !this.state.open }); console.log(this.state.open)}
+
 
     divStyle = {
         color: 'white',
@@ -37,16 +37,6 @@ class Header extends Component {
 
     };
 
-    	
-	toggleDataSeries(e){
-		if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-			e.dataSeries.visible = false;
-		}
-		else{
-			e.dataSeries.visible = true;
-		}
-		this.chart.render();
-	}
     
 
 
@@ -79,7 +69,8 @@ class Header extends Component {
                             docked={false}
                             width={200}
                             open={this.state.open}
-                            onRequestChange={(open) => this.setState({ open })}>
+                            
+                            onRequestChange={this.handleClose}>
 
                             <AppBar title="" />
                             <div className='Nav'>

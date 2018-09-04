@@ -114,7 +114,7 @@ class Patinets extends Component {
 
         return (
 
-            <div><CanvasJSChart options={options2} onRef={ref => this.chart = ref}/> {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}</div>
+            <div><CanvasJSChart options={options2} onRef={ref => this.chart = ref}/></div>
 
         )
     }

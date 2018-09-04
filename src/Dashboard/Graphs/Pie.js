@@ -42,7 +42,7 @@ class Pie extends Component {
         }
         return (
 
-            <div><CanvasJSChart options={options3} onRef={ref => this.chart = ref}/> {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}</div>
+            <div><CanvasJSChart options={options3} onRef={ref => this.chart = ref}/> </div>
 
         )
     }
