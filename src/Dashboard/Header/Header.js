@@ -14,6 +14,7 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 class Header extends Component {
     constructor(props) {
         super(props);
+
         this.state = {
             "open": false,
             "show": null
@@ -36,10 +37,25 @@ class Header extends Component {
 
     };
 
+    	
+	toggleDataSeries(e){
+		if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+			e.dataSeries.visible = false;
+		}
+		else{
+			e.dataSeries.visible = true;
+		}
+		this.chart.render();
+	}
+    
+
 
     render() {
+		
+			
         return (
-            <div>
+            <div class="row">
+         
 
                 <MuiThemeProvider>
                     <div>
@@ -82,9 +98,10 @@ class Header extends Component {
                     </div>
 
                 </MuiThemeProvider>
+                <div>
 
 
-
+            </div>
 
             </div>
         );
@@ -94,3 +111,6 @@ class Header extends Component {
 
 
 export default Header;
+
+ 
+                       

@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import Dashboard from './Dashboard';
+import React, {Component} from 'react';
+import Header from './Header/Header'
 
 class Patients extends Component {
 
-  render() {
-    return (
-      <div>
-        <Dashboard />
-        hello from Patients
- </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <Header headerName="My Clinic"/>
+                hello from Patients
+            </div>
+        );
+    }
 }
 
 export default Patients;

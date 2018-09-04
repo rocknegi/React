@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './Dashboard.css';
-import Header from './Header/Header'
+import Header from './Header/Header';
+import Cost from './Graphs/Cost';
+import Patinets from './Graphs/Patients';
+import Pie from './Graphs/Pie';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -12,31 +15,48 @@ class Dashboard extends Component {
         }
     }
 
-    handleToggle = () => this.setState({ open: !this.state.open });
+    handleToggle = () => this.setState({
+        open: !this.state.open
+    });
     showBar = () => {
-        this.setState({ show: 'bar', open: false });
+        this.setState({show: 'bar', open: false});
     }
 
     addPerson = () => {
         window.location.href = '/addPerson'
     }
 
-
-
     render() {
         return (
             <div>
-                <Header
-                    headerName="My Clinic"
+                <div class="container-fluid">
 
-                >
+                    <div class="row">
+                        <Header headerName="My Clinic"></Header>
+                        <div className="fab" onClick={this.addPerson}>
+                            +
+                        </div>
 
-                </Header>
-                <div className="fab" onClick={this.addPerson}> + </div>
+                        <div class="col-md-4">
+                            <Cost/>
+                        </div>
+
+                        <div class="col-md-4">
+                            <Patinets/>
+
+                        </div>
+                        <div class="col-md-4">
+                            <Pie/>
+
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
+
         );
     }
 }
-
 
 export default Dashboard;
