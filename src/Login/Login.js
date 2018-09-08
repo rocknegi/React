@@ -32,6 +32,10 @@ class Login extends Component {
         console.log(this.state.toDashboard)
     }
 
+    register = ()=>{
+        this.props.history.push("/Signup");
+    }
+
     render() {
         if (this.state.toDashboard === true) {}
         return (
@@ -60,9 +64,10 @@ class Login extends Component {
                         <a
                             className="signup"
                             style={{
-                            textDecoration: 'none'
+                            textDecoration: 'none',
+                            cursor: 'pointer'
                         }}
-                            href="/signup">
+                           onClick={this.register}>
                             create a new account
                         </a>
                     </div>

@@ -47,6 +47,10 @@ class AddPerson extends Component {
         event.preventDefault();
     }
 
+    saveNext = ()=>{
+        this.props.history.push("/dashboard/Diagnosis");
+    }
+
     handleChange = event => {
         this.setState({
             [event.target.name]: event.target.value

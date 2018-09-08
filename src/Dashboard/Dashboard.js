@@ -23,7 +23,7 @@ class Dashboard extends Component {
     }
 
     addPerson = () => {
-        window.location.href = '/addPerson'
+        this.props.history.push("/addPerson");
     }
 
     render() {

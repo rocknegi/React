@@ -10,6 +10,7 @@ import Expenses from './Dashboard/Expenses';
 import Drugs from './Dashboard/Drugs';
 import Engage from './Dashboard/Engage';
 import AddPerson from './AddPerson/AddPerson';
+import Diagnosis from './Dashboard/Diagnosis/Diagnosis';
 
 class App extends Component {
 
@@ -26,6 +27,7 @@ class App extends Component {
                 <Route path="/dashboard/Expenses" exact component={Expenses}/>
                 <Route path="/dashboard/Drugs" exact component={Drugs}/>
                 <Route path="/dashboard/Engage" exact component={Engage}/>
+                <Route path="/dashboard/Diagnosis" exact component = {Diagnosis}/>
             </div>
         );
     }
