@@ -11,6 +11,11 @@ import Drugs from './Dashboard/Drugs';
 import Engage from './Dashboard/Engage';
 import AddPerson from './AddPerson/AddPerson';
 import Diagnosis from './Dashboard/Diagnosis/Diagnosis';
+import PastVisits from './Dashboard/Diagnosis/PastVisits';
+import Billing from './Dashboard/Diagnosis/Billing';
+import References from './Dashboard/Diagnosis/References';
+import Diagnosis2 from './Dashboard/Diagnosis/Diagnosis2';
+import Complaints from './Dashboard/Diagnosis/Complaints';
 
 class App extends Component {
 
@@ -28,6 +33,12 @@ class App extends Component {
                 <Route path="/dashboard/Drugs" exact component={Drugs}/>
                 <Route path="/dashboard/Engage" exact component={Engage}/>
                 <Route path="/dashboard/Diagnosis" exact component = {Diagnosis}/>
+                <Route path="/dashboard/PastVisits" exact component = {PastVisits}/>
+                <Route path="/dashboard/Billing" exact component = {Billing}/>
+                <Route path="/dashboard/References" exact component = {References}/>
+                <Route path="/dashboard/Diagnosis2" exact component = {Diagnosis2}/>
+                <Route path="/dashboard/Complaints" exact component = {Complaints}/>
+
             </div>
         );
     }
