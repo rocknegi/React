@@ -36,9 +36,7 @@ class Dashboard extends Component {
 
                     <div className="row">
                         <Header headerName="My Clinic"></Header>
-                        <div className="fab" onClick={this.addPerson}>
-                            +
-                        </div>
+
 
                         <div className="col-md-4">
                             <Cost/>
@@ -52,7 +50,9 @@ class Dashboard extends Component {
                             <Pie/>
 
                         </div>
-
+                        <div className="fab" onClick={this.addPerson}>
+                            +
+                        </div>
                     </div>
 
                 </div>
