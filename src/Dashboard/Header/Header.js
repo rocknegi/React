@@ -44,7 +44,7 @@ class Header extends Component {
     render() {
 
         return (
-            <div class="row">
+            <div className="row">
 
                 <MuiThemeProvider>
                     <div>

@@ -23,29 +23,32 @@ class Dashboard extends Component {
     }
 
     addPerson = () => {
-        this.props.history.push("/addPerson");
+        this
+            .props
+            .history
+            .push("/addPerson");
     }
 
     render() {
         return (
             <div>
-                <div class="container-fluid">
+                <div className="container-fluid">
 
-                    <div class="row">
+                    <div className="row">
                         <Header headerName="My Clinic"></Header>
                         <div className="fab" onClick={this.addPerson}>
                             +
                         </div>
 
-                        <div class="col-md-4">
+                        <div className="col-md-4">
                             <Cost/>
                         </div>
 
-                        <div class="col-md-4">
+                        <div className="col-md-4">
                             <Patinets/>
 
                         </div>
-                        <div class="col-md-4">
+                        <div className="col-md-4">
                             <Pie/>
 
                         </div>

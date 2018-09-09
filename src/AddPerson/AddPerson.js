@@ -47,8 +47,11 @@ class AddPerson extends Component {
         event.preventDefault();
     }
 
-    saveNext = ()=>{
-        this.props.history.push("/dashboard/Diagnosis");
+    saveNext = () => {
+        this
+            .props
+            .history
+            .push("/dashboard/Diagnosis");
     }
 
     handleChange = event => {
@@ -62,10 +65,10 @@ class AddPerson extends Component {
             <div>
                 <Header headerName="Add Person"></Header>
                 <MuiThemeProvider>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-6">
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-md-2"></div>
+                            <div className="col-md-6">
 
                                 <TextField
                                     hintText="Enter patient's first name"
@@ -125,7 +128,7 @@ class AddPerson extends Component {
                                 <br/>
                             </div>
 
-                            <div class="col-md-4">
+                            <div className="col-md-4">
 
                                 <TextField
                                     hintText="Occupation"

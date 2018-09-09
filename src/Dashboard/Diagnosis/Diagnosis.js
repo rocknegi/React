@@ -28,13 +28,15 @@ class Diagnosis extends Component {
     render() {
 
         return (
-            <div class="container-fluid">
-                <MuiThemeProvider>
+            <MuiThemeProvider>
 
-                    <div class="row">
+            <div className="container-fluid">
+                
+                    <div className="row">
                         <Header headerName="Patient Diagnosis"/>
                         <DiagnosisHeader/>
-                        <div class="col-md-2">
+                        <br/>
+                        <div className="col-md-2">
                             <Card style={styles.card}>
                                 <CardActionArea>
                                     <CardMedia style={styles.media} image="" title="Temperature"/>
@@ -54,7 +56,7 @@ class Diagnosis extends Component {
 
                         </div>
 
-                        <div class="col-md-2">
+                        <div className="col-md-2">
                             <Card style={styles.card}>
                                 <CardActionArea>
                                     <CardMedia style={styles.media} image="" title="Heart Rate"/>
@@ -75,7 +77,7 @@ class Diagnosis extends Component {
 
                         </div>
 
-                        <div class="col-md-2">
+                        <div className="col-md-2">
                             <Card style={styles.card}>
                                 <CardActionArea>
                                     <CardMedia style={styles.media} image="" title="Blood Type"/>
@@ -96,8 +98,8 @@ class Diagnosis extends Component {
                         </div>
                     </div>
                     <br/>
-                    <div class="row">
-                        <div class="col-md-2">
+                    <div className="row">
+                        <div className="col-md-2">
                             <Card style={styles.card}>
                                 <CardActionArea>
                                     <CardMedia style={styles.media} image="" title="Cholestrol"/>
@@ -117,7 +119,7 @@ class Diagnosis extends Component {
 
                         </div>
 
-                        <div class="col-md-2">
+                        <div className="col-md-2">
                             <Card style={styles.card}>
                                 <CardActionArea>
                                     <CardMedia style={styles.media} image="" title="Hear Rate"/>
@@ -138,7 +140,7 @@ class Diagnosis extends Component {
 
                         </div>
 
-                        <div class="col-md-2">
+                        <div className="col-md-2">
                             <Card style={styles.card}>
                                 <CardActionArea>
                                     <CardMedia style={styles.media} image="" title="Blood Type"/>
@@ -159,9 +161,9 @@ class Diagnosis extends Component {
 
                         </div>
                     </div>
-                </MuiThemeProvider>
+               
             </div>
-
+            </MuiThemeProvider>
         )
     }
 
