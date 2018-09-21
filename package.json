@@ -10,6 +10,10 @@
     "@material-ui/icons": "^2.0.3",
     "axios": "^0.18.0",
     "bloomer": "^0.6.3",
+    "eslint-plugin-flowtype": "^2.50.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
     "i": "^0.3.6",
     "material-ui": "^0.20.2",
     "npm": "^6.4.1",
@@ -29,10 +33,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "eslint-plugin-flowtype": "^2.50.1",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.11.1"
-  }
+  "devDependencies": {}
 }
