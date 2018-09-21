@@ -27,6 +27,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "eslint-plugin-import": "^2.14.0"
+    
   }
 }
