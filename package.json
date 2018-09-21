@@ -1,6 +1,9 @@
 {
   "name": "assign",
   "version": "0.1.0",
+  "engines": {
+    "npm": "4.6.1"
+  },
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.0.2",
