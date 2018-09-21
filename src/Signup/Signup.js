@@ -1,113 +1,67 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
+import InputAdornment from '@material-ui/core/InputAdornment';
 
 class Signup extends Component {
-    render(){
-        return(
-            <div className='wrapper' style={wrapit}>
-                <Header/>
-                <Footer/>
-            </div>
-        );
+    constructor(props) {
+        super(props);
     }
-}
-
-const wrapit = {
-    background:"red",
-    display: 'grid',
-    gridTemplateRows : '1fr 4fr',
-    borderRadius: '40px',
-};
-
-const topstyle = {
-    background:'white',
-    justifySelf:'center',
-    border:'2px solid black',
-    gridRow:'1 2',
-};
-
-const bottom = {
-    background:'white',
-    alignContent:'center',
-    border:'2px dashed black',
-    gridRow:'2 3',
-    display:'grid',
-    gridTemplateColumns:'3fr 2fr',
-};
-
-class Header extends Component {
-    render(){
-        return(
-            <div className ='header' style={topstyle}>
-                <h1>Create an Account</h1>
-            </div>
-        );
+    onSubmit = () => {
+        this
+            .props
+            .history
+            .push('/dashboard')
     }
-}
 
+    render() {
+        return (
+            <div>
+                <MuiThemeProvider>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-6">
 
-class Footer extends Component {
-    render(){
-        return(
-            <div classname ='footer' style ={bottom}>
-                <Left/>
-                <Right/>
+                                <label
+                                    style={{
+                                    fontSize: '18px'
+                                }}>Dr.
+                                </label>{' '}
+                                <TextField hintText="First Name" floatingLabelText="First Name"/>
+                                <TextField hintText="Middle Name" floatingLabelText="Middle Name"/>
+                                <TextField hintText="Last Name" floatingLabelText="Last Name"/>
+                                <br/>
+                                <TextField hintText="Registration no" floatingLabelText="Registration no"/>
+                                <br/>
+                                <TextField hintText="Email" floatingLabelText="Email"/>
+                                <br/>
+                                <TextField multiLine floatingLabelText="Address" rows={2}/>
+                                <br/>
+
+                                <TextField hintText="City" floatingLabelText="City"/>
+
+                                <TextField hintText="State" floatingLabelText="State"/>
+                                <br/>
+                                <TextField hintText="PIN" floatingLabelText="PIN"/>
+
+                            </div>
+                            <div className="col-md-6">
+                                <TextField hintText="Practice" floatingLabelText="Practice"/>
+                                <br/>
+                                <TextField hintText="Degree" floatingLabelText="Degree"/>
+                                <br/>
+                                <TextField hintText="Clinic Name" floatingLabelText="Clinic Name"/>
+                                <br/>
+                                <br/>
+                                <RaisedButton primary={true} onClick={this.onSubmit}>Proceed</RaisedButton>
+                            </div>
+                        </div>
+                    </div>
+                </MuiThemeProvider>
             </div>
-        );
+        )
     }
+
 }
-
-class Left extends Component {
-    render(){
-        return(
-            <div classname ='left' style ={lef}>
-            <div >
-                <label>Dr. <input type='text'/><input type='text'/><input type='text'/></label>
-                </div>
-
-                <div >
-                <label>Registration no.<input type='text'/></label>
-                </div>
-            
-                <div >
-                <label>Phone number<input type='text'/></label>
-                </div>
-
-                <div >
-                <label>Email <input type='email'/></label>
-                </div>
-
-                <div >
-                <label>Address <input type='textarea'/></label>
-                </div>
-
-                <div style={{display:'inline'}}>
-                <label>City <input type='text'/></label>
-                <label>State: <input type='text'/></label>
-                </div>
-
-                <div >
-                <label>PIN <input type='text'/></label>
-                </div>
-            </div>
-        );
-    }
-}
-
-class Right extends Component {
-    render(){
-        return(
-            <div classname ='right' style ={rig}>
-              <h1>some content</h1>
-            </div>
-        );
-    }
-}
-
-const lef = {
- 
-};
-
-const rig = {
- 
-};
 export default Signup;
