@@ -44,13 +44,19 @@ class DiagnosisHeader extends React.Component {
                             <NavLink style={style.nav} activeStyle={style.active} to="/dashboard/Diagnosis">
                                 <Tab label="Vitals" style={style.tab}/>
                             </NavLink>
-
+                            <NavLink
+                                style={style.nav}
+                                activeStyle={style.active}
+                                to="/dashboard/PastVisits">
+                                <Tab label="Past Visits" style={style.tab}/>
+                            </NavLink>
                             <NavLink
                                 style={style.nav}
                                 activeStyle={style.active}
                                 to="/dashboard/Complaints">
                                 <Tab label="Complaints" style={style.tab}/>
                             </NavLink>
+
                             <NavLink
                                 style={style.nav}
                                 activeStyle={style.active}
